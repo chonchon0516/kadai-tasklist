@@ -1,16 +1,11 @@
-Rails.application.routes.draw do
-  # CRUD
-  get 'taskss/:id', to: 'taskss#show'
-  post 'taskss', to: 'taskss#create'
-  put 'taskss/:id', to: 'taskss#update'
-  delete 'taskss/:id', to: 'taskss#destroy'
+<h1>id = <%= @task.id %> のタスク編集ページ</h1>
 
-  # index: show の補助ページ
-  get 'taskss', to: 'taskss#index'
+<%= form_for(@task) do |f| %>
 
-  # new: 新規作成用のフォームページ
-  get 'taskss/new', to: 'taskss#new'
+  <%= f.label :content, 'task' %>
+  <%= f.text_field :content %>
 
-  # edit: 更新用のフォームページ
-  get 'taskss/:id/edit', to: 'taskss#edit'
-end
+  <%= f.submit '投稿' %>
+<% end %>
+
+<%= link_to '一覧に戻る', tasks_path %>

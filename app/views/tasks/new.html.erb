@@ -1,7 +1,8 @@
-<h1>tasks新規作成ページ</h1>
+<h1>新規作成ページ</h1>
 
-<%= form_for(@tasks) do |f| %>
-  <%= f.label :content, 'tasks' %>
+<%= form_for(@task) do |f| %>
+
+  <%= f.label :content, 'task' %>
   <%= f.text_field :content %>
 
   <%= f.submit '投稿' %>

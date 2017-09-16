@@ -1,7 +1,7 @@
-h1>id = <%= @tasks.id %> のメッセージ詳細ページ</h1>
+<h1>id = <%= @task.id %> のタスク詳細ページ</h1>
 
-<p><%= @tasks.content %></p>
+<p><%= @task.content %></p>
 
-<%= link_to '一覧に戻る', taskss_path %>
-<%= link_to 'このtasksを編集する', edit_tasks_path(@tasks) %>
-<%= link_to 'このtasksを削除する', @tasks, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+<%= link_to '一覧に戻る', tasks_path %>
+<%= link_to 'このtasksを編集する', edit_task_path(@task) %>
+<%= link_to 'このtasksを削除する', @task, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
